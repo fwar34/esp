@@ -16,7 +16,9 @@ function FsmMachine:SetInitState(baseState)
     self.curState = baseState
 end
 
+ucount = 0
 function FsmMachine:Update()
+    -- print('ucount:', ucount)
     self.curState:OnUpdate()
 end
 

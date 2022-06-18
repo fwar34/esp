@@ -1,7 +1,5 @@
 dofile('fsm_machine.lua')
 
-print('xxxxx')
-
 button = 3
 
 gpio.mode(button, gpio.INPUT, gpio.PULLUP)
@@ -16,8 +14,6 @@ fsm:AddState(pressBtn);
 fsm:AddState(releaseBtn);
 
 fsm:SetInitState(notPress);
-
-print('yyyyy')
 
 function notPress:OnUpdate()
     -- print('notPress:OnUpdate')
@@ -51,14 +47,13 @@ end
 function pressBtn:OnLeave()
     if pressDurationCount ~= 0 then
         if pressDurationCount < 50 then
-            print('short press')
+            print('short press:', pressDurationCount)
         else
-            print('long press')
+            print('long press:', pressDurationCount)
         end
     end
 end
 
-print('zzzzz')
 tmr.create():alarm(10, tmr.ALARM_AUTO, function()
     fsm:Update()
 end)

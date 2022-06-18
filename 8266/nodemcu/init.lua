@@ -18,6 +18,7 @@ local function abortInit()
         if file.exists('app.lua') then
             print('-------- dofile app.lua --------')
             dofile('app.lua')
+            -- dofile('oled_test.lua')
             -- dofile('test.lua')
         else
             print('app.lua not exists')
@@ -25,5 +26,5 @@ local function abortInit()
     end)
 end
 
--- tmr.create():alarm(1000, tmr.ALARM_SINGLE, abortInit) -- call abortInit after 1s
-abortInit()
+tmr.create():alarm(1000, tmr.ALARM_SINGLE, abortInit) -- call abortInit after 1s
+-- abortInit()
