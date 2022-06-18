@@ -18,7 +18,7 @@ end
 
 ucount = 0
 function FsmMachine:Update()
-    -- print('ucount:', ucount)
+    print('ucount:', ucount)
     self.curState:OnUpdate()
 end
 
