@@ -1,0 +1,16 @@
+{
+	"version": "2.4",
+	"projectType": "pure",
+	"corePath": "C:\\Users\\feng\\AppData\\Roaming\\LuatIDE\\LuatideCore\\ESP32C3_CORE\\LuatOS-SoC_V0003_ESP32C3.soc",
+	"libPath": "",
+	"moduleModel": "esp32c3",
+	"appFile": [
+		"display.lua",
+		"key_scan.lua",
+		"main.lua"
+	],
+	"modulePort": "",
+	"ignore": [
+		"luatide_project.json"
+	]
+}
