@@ -1,0 +1,13 @@
+{
+	"version": "2.4",
+	"projectType": "pure",
+	"corePath": "",
+	"libPath": "C:\\Users\\feng\\AppData\\Roaming\\LuatIDE\\LuatideLib\\Air72XUX_LIB\\V2.4.3\\lib",
+	"moduleModel": "simulator",
+	"appFile": [
+		"luatide_project.json",
+		"main.lua"
+	],
+	"modulePort": "",
+	"ignore": []
+}
