@@ -11,3 +11,11 @@ sys.taskInit(function()
     result, data = sys.waitUntil("IP_READY")
     log.info("wlan", "IP_READY", result, data)
 end)
+
+sys.subscribe("IP_READY", function()
+    count = 0
+    sys.timerLoopStart(function()
+        count = count + 1
+        led_d5(count % 2)
+    end, 500)
+end)

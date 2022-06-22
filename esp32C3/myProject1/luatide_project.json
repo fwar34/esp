@@ -8,7 +8,9 @@
 		"display.lua",
 		"key_scan.lua",
 		"main.lua",
-		"wifi_ntp.lua"
+		"mqttt.lua",
+		"ntp_sync.lua",
+		"wifii.lua"
 	],
 	"modulePort": "",
 	"ignore": [

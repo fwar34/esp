@@ -10,9 +10,15 @@ local TAG = 'main'
 local sys = require 'sys'
 log.info(TAG, 'hello world')
 
-
 wdt.init(10000) -- 初始化
 sys.timerLoopStart(wdt.feed, 5000)
+
+-- 输出模式，初始输出0
+led_d4 = gpio.setup(12, 0)
+led_d5 = gpio.setup(13, 0)
+
+-- 输入模式，不带中断
+button_boot = gpio.setup(19, nil)
 
 require 'display'
 require 'ntp_sync'
