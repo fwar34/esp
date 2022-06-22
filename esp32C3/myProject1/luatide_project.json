@@ -1,13 +1,14 @@
 {
 	"version": "2.4",
 	"projectType": "pure",
-	"corePath": "C:\\Users\\feng\\AppData\\Roaming\\LuatIDE\\LuatideCore\\ESP32C3_CORE\\LuatOS-SoC_V0003_ESP32C3.soc",
+	"corePath": "G:\\esp\\LuatOS-ESP32\\tools\\LuatOS-SoC_ESP32C3_ef28f3a_20220621083441.soc",
 	"libPath": "",
 	"moduleModel": "esp32c3",
 	"appFile": [
 		"display.lua",
 		"key_scan.lua",
-		"main.lua"
+		"main.lua",
+		"wifi_ntp.lua"
 	],
 	"modulePort": "",
 	"ignore": [
