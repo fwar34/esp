@@ -9,7 +9,8 @@ sys.subscribe('IP_READY', function()
 
         while true do
             local mqttc = espmqtt.init({
-                uri = "mqtt://lbsmqtt.airm2m.com:1884",
+                -- uri = "mqtt://lbsmqtt.airm2m.com:1884",
+                uri = "mqtt://broker-cn.emqx.io:1883",
                 client_id = (esp32.getmac():toHex())
             })
             log.info("mqttc", mqttc)
@@ -19,14 +20,14 @@ sys.subscribe('IP_READY', function()
                 log.info("mqttc", "start", ok, err)
                 if ok then
                     while 1 do
-                        log.info("mqttc", "wait ESPMQTT_EVT 30s")
-                        local result, c, ret, topic, data = sys.waitUntil("ESPMQTT_EVT", 30000)
+                        log.info("mqttc", "wait ESPMQTT_EVT 10s")
+                        local result, c, ret, topic, data = sys.waitUntil("ESPMQTT_EVT", 10000)
                         log.info("mqttc", result, c, ret)
                         if result == false then
                             -- 没消息, 没动静
                             log.info("mqttc", "wait timeout")
                             -- 这里演示给自己发一条. 按实际业务来定
-                            espmqtt.publish(mqttc, mqtt_topic, "{}")
+                            espmqtt.publish(mqttc, mqtt_topic, "{xxxxxxxxxxxx}")
                         elseif c == mqttc then
                             -- 是当前mqtt客户端的消息, 处理之
                             if ret == espmqtt.EVENT_CONNECTED then
